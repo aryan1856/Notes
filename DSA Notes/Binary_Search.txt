@@ -1,0 +1,26 @@
+Basic Ideology(algorithm) -
+
+It's a searching algorithm for the sorted lists. In this approach, the list is divided into two halves.
+We will search the 'target element' at the 'mid' index of the list.
+If the 'target' element is found at the 'mid', we will simply return the value of 'mid'.
+If element is not found at 'mid', we have two scenarios-
+    1 - If 'target' is less than the element at 'mid', we will terminate the right half of the list.
+    2 - If 'target' is greater than the element at 'mid', we will terminate the left half of the list.
+At last, if the element is not found at any index of list, we will simply return -1;
+
+PSEUDO CODE - 
+func(arr,n,target){
+    left = 0;
+    right = n-1;
+    while(left<=right){
+        mid = (left+right)/2;
+        if(arr[mid]==target) return mid;
+        else if(arr[mid]>target) right = mid-1;
+        else left = mid+1;
+    }
+    return -1; (in case the element wasn't found)
+}
+
+TIME COMPLEXITY -
+O(log(n))
+
