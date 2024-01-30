@@ -23,4 +23,3 @@ func(arr,n,target){
 
 TIME COMPLEXITY -
 O(log(n))
-
