@@ -11,6 +11,13 @@
 // 3 - deque 
 // 4 - Priority queue
 
+//TIME COMPLEXITY IN QUEUE
+// Search: O(n)
+// Insertion (without resizing): O(1)
+// Insertion (with resizing): O(n)
+// Deletion (without resizing): O(1)
+// Deletion (with resizing): O(n)
+
 //ARRAY IMPLEMENTATION OF A LINEAR(BASIC) QUEUE
 
 #include<stdio.h>
