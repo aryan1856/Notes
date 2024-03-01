@@ -23,6 +23,22 @@ void preorder(Node* root){
     }
 }
 
+void inorder(Node* root){
+    if(root!=NULL){
+        inorder(root->left);
+        printf("%d ",root->data);
+        inorder(root->right);
+    }
+}
+
+void postOrder(Node* root){
+    if(root!=NULL){
+        preorder(root->left);
+        preorder(root->right);
+        printf("%d ",root->data);
+    }
+}
+
 void main(){
     Node *root = createNode(5);
     root->left = createNode(10);
@@ -32,4 +48,8 @@ void main(){
     root->left->left->right = createNode(25);
     root->left->right = createNode(30);
     preorder(root);
+    printf("\n");
+    inorder(root);
+    printf("\n");
+    postOrder(root);
 }
